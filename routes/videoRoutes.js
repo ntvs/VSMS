@@ -43,6 +43,12 @@ router.get("/metadata/:videoId", async (req, res) => {
     });
 });
 
+router.get("/file", (req, res) => {
+    return res.status(200).send({
+        "msg": "No video file ID was provided. To use this feature, please provide a valid video file ID."
+    });
+});
+
 //-------------------------------------------------------------------
 
 module.exports = router;
