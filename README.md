@@ -5,6 +5,7 @@ Video Serving Micro Service implemented in Express.js
 To serve video files and metadata to clients
 
 ## Features
+- Serve video metadata
 
 ## Metadata
 - Title
