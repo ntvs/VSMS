@@ -3,3 +3,6 @@ node_modules
 
 #Environment variables
 .env
+
+#Stream html test page
+testpage.html
