@@ -6,14 +6,7 @@ To serve video files and metadata to clients
 
 ## Features
 - Serve video metadata
-
-## Metadata
-- Title
-- Description
-- Tags
-- Rating
-- Views
-- Latest update
+- Serve MP4 video files
 
 ## Issues
 
@@ -21,3 +14,4 @@ To serve video files and metadata to clients
 - PORT=
 - DB_URL=
 - CONTENT_DIRECTORY=
+- VIDEO_CHUNK_SIZE=
