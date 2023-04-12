@@ -19,6 +19,16 @@ const fs = require("fs");
 
 //routes
 
+router.get("/all", async (req, res) => {
+
+    let videos = await Video.find({}).select("title description");
+
+    return res.status(200).send({
+        videos
+    });
+
+});
+
 router.get("/metadata", (req, res) => {
     return res.status(200).send({
         "msg": "No video ID was provided. To use this feature, please provide a valid video ID."
