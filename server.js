@@ -1,6 +1,9 @@
 //Load environment variables
 require("dotenv").config();
 
+const package = require('./package.json');
+const appName = `${package.name}@${package.version}`;
+
 //-------------------------------------------------------------------
 
 //Express setup
@@ -20,10 +23,10 @@ const db = mongoose.connection;
 //Mongoose connection event listeners
 db.on("error", (e) => {
     console.log(e);
-    console.log("[Server] Please check if your URL is correct.\n");
+    console.log(`[${appName}] Please check if your URL is correct.\n`);
 });
 db.once("open", () => {
-    console.log("[Server] MongoDB connection established successfully.\n");
+    console.log(`[${appName}] MongoDB connection established successfully.\n`);
 });
 
 //-------------------------------------------------------------------
@@ -50,5 +53,5 @@ app.use('/video', videoRoutes);
 
 //Server listening behavior
 app.listen(port, () => {
-    console.log(`\n[Server] Now listening on ======> http://localhost:${port}\n`);
+    console.log(`\n[${appName}] Now listening on ======> http://localhost:${port}\n`);
 });
